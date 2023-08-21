@@ -1,27 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Mulish", sans-serif;
+}
+
+.main {
+  @apply max-w-[1600px] mx-auto;
+}
+
+.container {
+  @apply w-[1273px] mx-auto;
+}
+
+.customShadow {
+  box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+}
+
+.linear {
+  background: linear-gradient(223deg, #67c3f3 0%, #5a98f2 100%);
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  :root {
+    zoom: 0.8;
+  }
 }
